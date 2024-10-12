@@ -1,2 +1,2 @@
-from .main_frame import mainframe
+from .mainframe import main_window, scrollable_frame, window_frame
 from .request_api import *
