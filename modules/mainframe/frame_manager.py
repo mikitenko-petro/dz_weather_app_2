@@ -26,14 +26,3 @@ scrollable_frame = customtkinter.CTkScrollableFrame(
 )
 # scrollable_frame.pack(side= "left", fill= "both", expand= True)
 scrollable_frame.grid(row=0, column=0, sticky="nsew")
-#
-city_frame = customtkinter.CTkFrame(
-    master= scrollable_frame,
-    width= 235,
-    height= 100,
-    fg_color= "#4599A4",
-    border_width= 2,
-    border_color= "#FFFFFF",
-    corner_radius= 20,
-)
-city_frame.pack(anchor= "center", expand= True)

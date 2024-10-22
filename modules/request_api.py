@@ -11,7 +11,7 @@ API_KEY = data_api['api_key']
 #
 CITY_NAME = data_api['city_name']
 #
-URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}&units=metric"
+URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY_NAME}&appid={API_KEY}&units=metric&lang=uk"
 #
 response = requests.get(URL)
 #
@@ -22,4 +22,4 @@ if response.status_code == 200:
     create_json(name_file= "config_weather.json", name_dict= data_dict)
     #
     #
-    print(json.dumps(data_dict, indent= 4))
+    print(json.dumps(data_dict, indent= 4, ensure_ascii= False))
