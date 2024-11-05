@@ -5,7 +5,7 @@ from .frame_manager import scrollable_frame
 dict_label = read_json(name_file="config_weather.json")
 
 CITY_NAME= dict_label['name']
-CURRENT_TEMP = f'{int(dict_label['main']['temp'])}°'
+CURRENT_TEMP = f"{int(dict_label['main']['temp'])}°"
 MAX_TEMP = f"макс.: {int(dict_label['main']['temp_max'])}°"
 MIN_TEMP = f"мін.: {int(dict_label['main']['temp_min'])}°"
 WEATHER_DESCRIPTION = dict_label['weather'][0]['description'].capitalize()
