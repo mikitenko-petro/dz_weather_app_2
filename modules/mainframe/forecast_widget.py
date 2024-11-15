@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from .horizontal_scroll import h_scroll
 from .weather_image_widget import WeatherImage
+from .hourly_forecast_time import HourlyForecastTime
 
 class HourlyForecast(ctk.CTkFrame):
     def __init__(self, child_master: object, count: int = 0,  **kwargs):
@@ -15,11 +16,7 @@ class HourlyForecast(ctk.CTkFrame):
         #
         self.grid(row= 0, column = self.COUNT, padx= 20)
         #
-        self.TIME = ctk.CTkLabel(
-            master= self,
-            text= "Time",
-            font= ("Arial", 32, "bold")
-        )
+        self.TIME = HourlyForecastTime(child_master= self, count= self.COUNT)
         self.TIME.pack(anchor= 'center')
         #
         self.IMAGE = WeatherImage(
